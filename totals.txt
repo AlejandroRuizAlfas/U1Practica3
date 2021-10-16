@@ -1,0 +1,3 @@
+El resultado del fichero numeros.txt ha sido: 40
+El resultado del fichero numeros2.txt ha sido: 4
+La suma total de todos los ficheros es 44
