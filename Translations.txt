@@ -1,0 +1,9 @@
+<raton> --> <mouse>
+<movil> --> <phone>
+<raton> --> <mouse>
+<movil> --> <phone>
+<casa> --> <house>
+<techo> --> <roof>
+<botella> --> <bottle>
+<juguete> --> <toy>
+<armario> --> <wardrobe>

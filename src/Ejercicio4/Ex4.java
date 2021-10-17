@@ -1,14 +1,22 @@
 package Ejercicio4;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Ex4 {
+    private static HashMap<String, String> traducciones = new HashMap<>();
     public static void main(String[] args) {
         searchArgs(args);
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("Translations.txt",true));
+            for(Map.Entry<String,String> m :traducciones.entrySet()){
+                bw.write("<"+m.getKey()+">"+" --> "+"<"+m.getValue()+">");
+                bw.newLine();
+            }
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /*El metodo searchArgs() se encargará de leer los argumentos que se le pasan, y dependiendo
@@ -75,7 +83,11 @@ public class Ex4 {
                 bw.write(linea);
                 bw.newLine();
                 bw.flush();
-                System.out.println(scHijo.nextLine());
+                String palabra = scHijo.nextLine();
+                System.out.println(palabra);
+                if (!palabra.equals("desconocido")){
+                    traducciones.put(linea,palabra);
+                }
                 linea = sc.nextLine();
             }
         } catch (IOException ex) {
@@ -102,7 +114,11 @@ public class Ex4 {
                 bw.write(linea);
                 bw.newLine();
                 bw.flush();
-                System.out.println(scHijo.nextLine());
+                String palabra = scHijo.nextLine();
+                System.out.println(palabra);
+                if (!palabra.equals("desconocido")){
+                    traducciones.put(linea,palabra);
+                }
                 linea = br.readLine();
             }
         } catch (IOException ex) {
