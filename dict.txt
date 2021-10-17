@@ -1,0 +1,6 @@
+palabras;words
+raton;mouse
+ordenador;computer
+juguete;toy
+armario;wardrobe
+movil;phone
